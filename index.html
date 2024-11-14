@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #63b1cf;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #000000;
+        background: #fff;
+        width: 90%; /* Adjust width for responsiveness */
+        max-width: 400px; /* Maximum width for larger screens */
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="number"] {
+        width: 60%; /* Wider input for better usability */
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    button {
+        padding: 10px 20px;
+        margin: 10px;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    button:hover {
+        background-color: #a24dc4;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 600px) {
+        .container {
+            width: 95%; /* Full width on smaller screens */
+        }
+
+        input[type="number"] {
+            width: 80%; /* Wider input on smaller screens */
+        }
+
+        button {
+            width: 100%; /* Full width buttons on smaller screens */
+        }
+    }
+</style>
+<body>
+
+    <div class="container">
+        <h1>Guess the Number!</h1>
+        <label for="level">Select Level:</label>
+        <select id="level">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+        <button id="start">Start Game</button>
+
+        <div id="game" style="display: none;">
+            <p>Guess a number between <span id="range"></span>:</p>
+            <input type="number" id="guess" />
+            <button id="submit">Submit Guess</button>
+            <p id="message"></p>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

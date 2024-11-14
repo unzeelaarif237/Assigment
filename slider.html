@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            background-color: #c1e0e9; /* Background color */
+        }
+
+        h1 {
+            margin: 20px 0; /* Adjust margin to move it closer to the top */
+            color: rgb(8, 8, 77);
+        font-weight: bolder;
+       font-size: larger; font-family: 'Times New Roman', Times, serif;
+       font-style: italic; font-size: xx-large;
+        }
+
+        .slider {
+            position: relative;
+            max-width: 600px;
+            width: 100%; /* Make it responsive */
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px; /* Optional: Add rounded corners */
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slide {
+            min-width: 100%;
+            display: none;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        .dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #717171;
+        }
+
+        /* Responsive image */
+        .slide img {
+            width: 100%; /* Make images responsive */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+      
+.quote-container {
+    background-color: rgba(37, 150, 170, 0.7); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 600px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+    </style>
+</head>
+<body>
+    <h1>IMAGE SLIDER</h1>
+
+    <div class="slider">
+        <div class="slides">
+            <img src="https://www.agoda.com/wp-content/uploads/2024/01/Featured-image-Al-Masjid-an-Nabawi-Medina-Saudi-Arabia-1244x700.jpg" alt="Image 1" class="slide active">
+            <img src="https://media.istockphoto.com/id/482206266/photo/kaaba-in-mecca.jpg?s=612x612&w=0&k=20&c=wwzNu3XMQpCRVdAcBbeerUGaew0Fk2nGPQkH98Wj474=" alt="Image 2" class="slide">
+            <img src="https://thumbs.dreamstime.com/b/al-aqsa-mosque-israel-24928568.jpg" alt="Image 3" class="slide">
+        </div>
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </div>
+
+
+    <div class="quote-container">
+        <h1>Masjid Aqsa</h1>
+        <p>"Masjid Aqsa is not just a place of worship; it's a symbol of resilience and faith."</p>
+        <p>"In the heart of Jerusalem, it stands as a testament to our history and heritage."</p>
+        <p>"Let us cherish and protect this sacred site for generations to come."</p>
+</div>
+<script src="app.js"></script>
+</body>
